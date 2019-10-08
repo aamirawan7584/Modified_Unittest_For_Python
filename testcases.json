@@ -1,0 +1,42 @@
+{
+  "tests.test_1": {
+    "Alpha": {
+      "TestCases_Name": [
+        "test_alpha1",
+        "test_alpha2",
+        "test_alpha3",
+        "test_alpha4"
+      ]
+    },
+    "TestSuite": {
+      "TestCases_Name": [
+        "test_a1",
+        "test_a2",
+        "test_a3",
+        "test_a4"
+      ]
+    }
+  },
+  "tests.test_2": {
+    "TestSuite2": {
+      "TestCases_Name": [
+        "test_b1",
+        "test_b2",
+        "test_b3",
+        "test_b4"
+      ]
+    }
+  },
+  "tests.test_3": {
+    "TestSuite2": {
+      "TestCases_Name": [
+        "test_b1",
+        "test_b2",
+        "test_b3",
+        "test_b4",
+        "test_b5",
+        "test_b6"
+      ]
+    }
+  }
+}

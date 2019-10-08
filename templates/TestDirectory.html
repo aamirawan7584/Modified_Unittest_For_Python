@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Test Runner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/themes/default/style.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/jstree.min.js"></script>
+    <h1> Test Directory</h1>
+    <div>
+    <script type="text/javascript">
+		jQuery.get('hello.json', function(data){
+		alert(data);
+        createJSTree(data);
+        });
+        function createJSTree(jdata) {
+            $('#SimpleJSTree').jstree({
+                "core": {
+                    "check_callback": true,
+                    'data': jdata
+                },
+				"checkbox" : {
+					"keep_selected_style" : false
+				},
+                "plugins": ["checkbox"]
+            });
+        }
+
+
+        function myFunction(elmnt,clr){
+         elmnt.style.color =clr;
+         var selectedElmsinfo = [];
+
+         var selectedElms = $('#SimpleJSTree').jstree("get_selected", true);
+            $.each(selectedElms, function() {
+                selectedElmsinfo.push(this.id,this.text,this.parent,this.parentName);
+
+            });
+             alert(selectedElmsinfo);
+        }
+
+
+    </script>
+        </div>
+        <div>
+            <button onclick="myFunction(this,'red')">Done</button>
+        </div>
+
+</head>
+<body>
+    <div id="SimpleJSTree"></div>
+</body>
+</html>
